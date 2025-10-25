@@ -1,16 +1,25 @@
 #include <stdio.h>
 
 int main() {
-  FILE *file;
-  file = fopen("test.txt", "r");
+    struct Person {
+        char Name[100];
+        int Age;
+    };
+    enum Teste {
+        foo = 0,
+        bar,
+        tas,
+        teste,
+    };
 
-  char text[100];
+    struct Person foo1 = {"gabriel", 18};
+    struct Person foo2 = {"richard", 22};
 
-  while (fgets(text, 100, file)) {
-    printf("%s", text);
-  }
-  printf("%s", file);
+    printf("%s\n", foo1);
+    printf("%s\n", foo2);
+    
+    enum Teste t1 = teste;
 
-  fclose(file);
-  return 0;
+    printf("%d\n", t1);
+    return 0;
 }
